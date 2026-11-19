@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVerse - Market Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Halaman Login-->
+    <section id="login-page" class="login-page">
+
+        <div class="login-decoration decoration-one"></div>
+        <div class="login-decoration decoration-two"></div>
+
+        <div class="login-card">
+            <div class="login-logo">₿</div>
+
+            <p class="login-subtitle">WELCOME TO</p>
+
+            <h1>Crypto<span>Verse.</span></h1>
+
+            <p class="login-description">
+                Eksplore the world of cryptocurrency
+                in one simple dashboard
+            </p>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Masukkan Username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">password</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            required
+                    >
+
+                    <button
+                        type="button"
+                        id="toggle-password"
+                        class="toggle-password"
+                    >
+                        Lihat
+                    </button>
+                    </div>
+                </div>
+                
+                <p id="login-error" class="login-error"></p>
+
+                <button type="submit" class="login-button">
+                    Masuk Ke Dashboard
+                    <span>→</span>
+                </button>
+            </form>
+
+            <div class="login-info">
+                <span>✦</span>
+                Cryptocurrency Market Information
+            </div>
+
+            <P class="login-footer">
+                Project praktikum 3 2026
+            </P>
+        </div>
+    </section>
+
+    <!--HALAMAN DASHBOARD-->
+
+    <main id="dashboard-page" class="dashboard-page hidden">
+
+        <div class="dashboard-container">
+
+            <!--HEADER-->
+
+            <header class="dashboard-header">
+                <div class="brand">
+                    <div class="brand-icon">₿</div>
+
+                    <div>
+                        <h1>CryptoVerse</h1>
+                        <p>Cryptocurrency Dashboard</p>
+                    </div>
+                </div>
+
+                <button id="logout-button" class="logout-button">
+                    →Logout
+                </button>
+
+            </header>
+
+            <!--HERO-->
+
+            <section class="welcome-selection">
+                
+                <div>
+                    <p class="welcome-label">
+                        YOUR MARKET OVERVIEW
+                    </p>
+
+                    <h2>
+                        Selamat datang di
+                        <span>CryptoVerse</span>
+                    </h2>
+
+                    <p>
+                        Pantau perkembangan cryptocurrency
+                        dari berbagai belahan dunia.
+                    </p>
+                </div>
+
+                <div class="hero-coin">₿</div>
+            </section>
+
+            <!--STATISTIK-->
+            
+            <section class="statistics">
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">₿</div>
+
+                    <div>
+                        <p>Total Ditampilkan</p>
+                        <h3 id="total-crypto">0</h3>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">↻</div>
+
+                    <div>
+                        <p>Status API</p>
+                        <h3 id="api-status">Menunggu</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!--DAFTAR CRYPTOCURRENCY-->
+
+            <section class="market-selection">
+                <div class="selection-heading">
+
+                    <div>
+                        <p class="selection-label">
+                            LIVE MARKET DATA
+                        </p>
+
+                        <h2>Top Cryptocurrency</h2>
+
+                        <p id="update-time">
+                            Menunggu data.....
+                        </p>
+                    </div>
+
+                    <button
+                        id="refresh-button"
+                        class="refresh-button"
+                    >
+                        <span id="refresh-icon">↻</span>
+                        <span id="refresh-text">Refresh</span>
+                    </button>
+                </div>
+
+                 <!-- PENCARIAN -->
+
+                <div class="search-wrapper">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Cari nama atau simbol cryptocurrency..."
+                    >
+
+                </div>
+
+
+                <!-- LOADING -->
+
+                <div id="loading" class="message hidden">
+
+                    <div class="loader"></div>
+
+                    <p>Mengambil data cryptocurrency...</p>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <div id="error-message" class="error-message hidden">
+
+                    <p>Data gagal dimuat dari server.</p>
+
+                    <button id="retry-button">
+                        Coba Lagi
+                    </button>
+
+                </div>
+
+
+                <!-- DAFTAR DATA -->
+
+                <div id="crypto-list" class="crypto-list"></div>
+
+
+                <!-- FOOTER MARKET -->
+
+                <div class="market-footer">
+
+                    <span class="live-dot"></span>
+
+                    Live data powered by Coinlore API
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <div>
+                    <strong>CryptoVerse</strong>
+                    <p>Cryptocurrency Information System</p>
+                </div>
+
+                <p>© 2026 | Project praktikum 3</p>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
